@@ -1,0 +1,18 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    font-size: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.back-picture {
+    background: url(../pic/seal.jpg) no-repeat;
+    width: 100%;
+    height: 100%;
+}
