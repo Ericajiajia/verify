@@ -3,16 +3,122 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body {
     font-size: 0;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-.back-picture {
-    background: url(../pic/seal.jpg) no-repeat;
+.page-container {
     width: 100%;
-    height: 100%;
+    height: auto;
+}
+.head-container, .head-container img  {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.body-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0.33rem 0 0.38rem;
+  background: #1a0c01;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.body-container-box {
+  width: 2.83rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+.product-container, .ingredient-container {
+  width: 100%;
+  height: auto;
+}
+.product-title {
+  width: 1.73rem;
+  height: 0.16rem;
+  margin: 0 auto 0.2rem;
+  line-height: 0.16rem;
+  font-size: 0.16rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-bar-left, .product-bar-right {
+  width: 0.44rem;
+  height: 0.03rem;
+  border-radius: 0.02rem;
+  background: #fec340;
+}
+.product-content {
+  width: 100%;
+  height: auto;
+  margin: 0.19rem 0 0;
+  padding: 0;
+  font-size: 0.12rem;
+  line-height: 0.2rem;
+  font-weight: 100;
+}
+.product-word {
+  margin: 0;
+}
+.product-block {
+  margin: 0.13rem 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+.product-block-title {
+  width: 0.58rem;
+  color: #fec340;
+}
+.product-block-content {
+  width: calc(100% - .58rem);
+}
+.ingredient-container {
+  margin: 0.5rem 0;
+}
+.ingredient-pic, .ingredient-pic img {
+  width: 100%;
+  height: auto;
+}
+.effect-content {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-weight: 100;
+  font-size: .12rem;
+}
+.effect-content p {
+  margin: 0;
+  line-height: 0.2rem;
+}
+.effect-content p:first-child {
+  margin: 0 0 0.13rem;
+}
+.bottom-container {
+    width: 100%;
+    height: 0.69rem;
+    padding: 0.06rem 0;
+    margin: 0;
+    background: #fec340;
+}
+.bottom-wechat-pic, .bottom-wechat-pic img {
+  width: 0.38rem;
+  height: 0.38rem;
+  margin: 0 auto;
+}
+.bottom-title {
+  width: 100%;
+  height: 0.13rem;
+  margin-top: 0.06rem;
+  line-height: 0.13rem;
+  text-align: center;
+  font-size: 0.13rem;
+  color: #1a0c01;
 }
