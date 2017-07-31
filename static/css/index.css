@@ -75,14 +75,14 @@ body {
   justify-content: space-around;
 }
 .product-block-title {
-  width: 0.54rem;
+  width: auto;
   color: #fed440;
 }
 .product-block-title span {
   color: #ffffff;
 }
 .product-block-content {
-  width: calc(100% - .54rem);
+  width: calc(100% - .6rem);
 }
 .ingredient-container {
   margin: 0.5rem 0;
