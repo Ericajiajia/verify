@@ -84,14 +84,3 @@ shareLink = encodeURI(shareLink);
     }, 1000)
   }) 
 })();
-
-
-
-
-
-
-
-
-
-// 问题：分享链接是不是http://diannanye.com/cooling/index.html，
-// 然后给别人看看是不是完整了
