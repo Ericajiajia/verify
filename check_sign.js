@@ -16,10 +16,10 @@ console.log(sign('jsapi_ticket', 'http://diannanye.com/cooling/'));
  *}
  */
 
-fs.readFile('./token', (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
+// fs.readFile('./token', (err, data) => {
+//   if (err) throw err;
+//   console.log(data);
+// });
 // const options = {
 //     hostname: 'api.douban.com',
 //     port: 80,
