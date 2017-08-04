@@ -1,4 +1,5 @@
 var sign = require('./sign.js')
+const fs = require('fs')
 var express = require('express')
 var http = require('http')
 // 构建Express实例
@@ -14,6 +15,36 @@ console.log(sign('jsapi_ticket', 'http://diannanye.com/cooling/'));
  *  signature: '1316ed92e0827786cfda3ae355f33760c4f70c1f'
  *}
  */
+
+fs.readFile('./token', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+// const options = {
+//     hostname: 'api.douban.com',
+//     port: 80,
+//     path: '/v2/movie/top250'
+// };
+// const req = http.request(options, (res) => {
+//     console.log(1234)
+//     console.log(`状态码: ${res.statusCode}`);
+//     console.log(`响应头: ${JSON.stringify(res.headers)}`);
+//     res.setEncoding('utf8');
+//     res.on('data', (chunk) => {
+//         // postData取数据
+//         console.log(`响应主体: ${chunk}`);
+//         postData += chunk
+//     });
+//     res.on('end', () => {
+//         console.log('响应中已无数据.');
+//     });
+// });
+// req.on('error', (e) => {
+//     console.error(`请求遇到问题: ${e.message}`);
+// });
+// // http.request()必须要用req.end()来结束请求
+// req.end();
+
 
 
 app.listen(3000, '0.0.0.0')

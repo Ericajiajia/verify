@@ -1,6 +1,7 @@
 const fs = require('fs');
-const request = require('request');
 const qs = require('querystring');
+
+// access_token的获取
 const getAccessToken = function () {
   let queryParams = {
     'grant_type': 'client_credential',
@@ -37,5 +38,7 @@ const refreshToken = function () {
   saveToken();
   setInterval(function () {
     saveToken();
-  }, 7200*1000);
+  }, 7000*1000);
 };
+
+module.exports = getAccessToken;
