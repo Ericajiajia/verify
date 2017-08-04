@@ -16,14 +16,11 @@ console.log(sign('jsapi_ticket'));
  */
 
 
+app.listen(3000, '0.0.0.0')
 
 // 注册页面可以看到显式数据
 app.get('/data', function (req, res) {
     res.json(sign('jsapi_ticket'))
-})
-// 监听端口3000
-app.listen(3000, function () {
-  console.log('Open successfully!')
 })
  app.get('/*', function(req, res, next) {
     // 使用默认参数，除了根路径要改变
