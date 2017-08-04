@@ -1,4 +1,4 @@
-var shareLink = 'http://diannanye.com/cooling/index.html';
+var shareLink = 'http://diannanye.com/cooling/';
 shareLink = encodeURI(shareLink);
 (function () {
   var sendData = {url: shareLink}
@@ -29,7 +29,7 @@ shareLink = encodeURI(shareLink);
       wx.onMenuShareTimeline({
         title: '滇南叶-Cooling茶支介绍', // 分享标题
         link: shareLink, // 分享链接
-        imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
+        imgUrl: 'http://diannanye.com/static/pic/share_pic.jpg', // 分享图标
         success: function () {
         },
         cancel: function () {
@@ -39,7 +39,7 @@ shareLink = encodeURI(shareLink);
         title: '滇南叶-Cooling茶支介绍', // 分享标题
         desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
         link: shareLink, // 分享链接
-        imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
+        imgUrl: 'http://diannanye.com/static/pic/share_pic.jpg', // 分享图标
         success: function () { 
         },
         cancel: function () { 
@@ -49,7 +49,7 @@ shareLink = encodeURI(shareLink);
           title: '滇南叶-Cooling茶支介绍', // 分享标题
           desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
-          imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
+          imgUrl: 'http://diannanye.com/static/pic/share_pic.jpg', // 分享图标
           success: function () {
              // 用户确认分享后执行的回调函数
           },
@@ -61,7 +61,7 @@ shareLink = encodeURI(shareLink);
           title: '滇南叶-Cooling茶支介绍', // 分享标题
           desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
-          imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
+          imgUrl: 'http://diannanye.com/static/pic/share_pic.jpg', // 分享图标
           success: function () {
              // 用户确认分享后执行的回调函数
           },
@@ -73,7 +73,7 @@ shareLink = encodeURI(shareLink);
           title: '滇南叶-Cooling茶支介绍', // 分享标题
           desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
-          imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
+          imgUrl: 'http://diannanye.com/static/pic/share_pic.jpg', // 分享图标
           success: function () { 
              // 用户确认分享后执行的回调函数
           },
