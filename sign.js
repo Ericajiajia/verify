@@ -34,7 +34,8 @@ var sign = function (jsapi_ticket, url) {
   var ret = {
     jsapi_ticket: jsapi_ticket,
     nonceStr: createNonceStr(),
-    timestamp: createTimestamp()
+    timestamp: createTimestamp(),
+    url: url
   };
   var string = raw(ret);
       jsSHA = require('jssha');

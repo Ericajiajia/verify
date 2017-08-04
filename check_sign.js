@@ -1,16 +1,16 @@
-var sign = require('./sign.js');
+var sign = require('./sign.js')
 var express = require('express')
 var http = require('http')
 // 构建Express实例
 var app = express()
-console.log(sign('jsapi_ticket'));
+console.log(sign('jsapi_ticket', 'http://diannanye.com/cooling/'));
 /*
  *something like this
  *{
  *  jsapi_ticket: 'jsapi_ticket',
  *  nonceStr: '82zklqj7ycoywrk',
  *  timestamp: '1415171822',
- *  url: 'http://example.com',
+ *  url: 'http://diannanye.com/cooling/',
  *  signature: '1316ed92e0827786cfda3ae355f33760c4f70c1f'
  *}
  */
@@ -20,7 +20,7 @@ app.listen(3000, '0.0.0.0')
 
 // 注册页面可以看到显式数据
 app.get('/data', function (req, res) {
-    res.json(sign('jsapi_ticket'))
+    res.json(sign('jsapi_ticket', 'http://diannanye.com/cooling/'))
 })
  app.get('/*', function(req, res, next) {
     // 使用默认参数，除了根路径要改变
