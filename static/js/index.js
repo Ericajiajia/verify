@@ -37,7 +37,7 @@ shareLink = encodeURI(shareLink);
       })
       wx.onMenuShareAppMessage({
         title: '滇南叶-Cooling茶支介绍', // 分享标题
-        desc: '滇南叶Cooling茶支，茶与薄荷的现代全新体验。', // 分享描述
+        desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
         link: shareLink, // 分享链接
         imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
         success: function () { 
@@ -47,7 +47,7 @@ shareLink = encodeURI(shareLink);
       })
       wx.onMenuShareQQ({
           title: '滇南叶-Cooling茶支介绍', // 分享标题
-          desc: '滇南叶Cooling茶支，茶与薄荷的现代全新体验。', // 分享描述
+          desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
           imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
           success: function () {
@@ -59,7 +59,7 @@ shareLink = encodeURI(shareLink);
       })
       wx.onMenuShareWeibo({
           title: '滇南叶-Cooling茶支介绍', // 分享标题
-          desc: '滇南叶Cooling茶支，茶与薄荷的现代全新体验。', // 分享描述
+          desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
           imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
           success: function () {
@@ -71,7 +71,7 @@ shareLink = encodeURI(shareLink);
       })
       wx.onMenuShareQZone({
           title: '滇南叶-Cooling茶支介绍', // 分享标题
-          desc: '滇南叶Cooling茶支，茶与薄荷的现代全新体验。', // 分享描述
+          desc: '传统茶香与薄荷清新交织，带来现代品茶全新体验。', // 分享描述
           link: shareLink, // 分享链接
           imgUrl: 'http://diannanye.com/cooling/static/pic/share_pic.jpg', // 分享图标
           success: function () { 
