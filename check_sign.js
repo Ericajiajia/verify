@@ -1,10 +1,11 @@
 var sign = require('./sign.js')
-const fs = require('fs')
 var express = require('express')
 var http = require('http')
 // 构建Express实例
 var app = express()
-console.log(sign('jsapi_ticket', 'http://diannanye.com/cooling/'));
+var fs = require('fs')
+const token = fs.readFileSync('./token').toString()
+const reqUrl = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=' + token + '&type=jsapi'
 /*
  *something like this
  *{
@@ -16,42 +17,28 @@ console.log(sign('jsapi_ticket', 'http://diannanye.com/cooling/'));
  *}
  */
 
-// fs.readFile('./token', (err, data) => {
-//   if (err) throw err;
-//   console.log(data);
-// });
-// const options = {
-//     hostname: 'api.douban.com',
-//     port: 80,
-//     path: '/v2/movie/top250'
-// };
-// const req = http.request(options, (res) => {
-//     console.log(1234)
-//     console.log(`状态码: ${res.statusCode}`);
-//     console.log(`响应头: ${JSON.stringify(res.headers)}`);
-//     res.setEncoding('utf8');
-//     res.on('data', (chunk) => {
-//         // postData取数据
-//         console.log(`响应主体: ${chunk}`);
-//         postData += chunk
-//     });
-//     res.on('end', () => {
-//         console.log('响应中已无数据.');
-//     });
-// });
-// req.on('error', (e) => {
-//     console.error(`请求遇到问题: ${e.message}`);
-// });
-// // http.request()必须要用req.end()来结束请求
-// req.end();
+function getJsApiTicket() {
+  let options = {
+    method: 'get',
+    url: reqUrl
+  };
 
-
-
+  return new Promise((resolve, reject) => {
+    request(options, function (err, res, body) {
+      if (res) {
+        resolve(body);
+      } else {
+        reject(err);
+      }
+    })
+  })
+}
 app.listen(3000, '0.0.0.0')
 
 // 注册页面可以看到显式数据
 app.get('/data', function (req, res) {
-    res.json(sign('jsapi_ticket', 'http://diannanye.com/cooling/'))
+  console.log(sign(getJsApiTicket().then(data => {return JSON.parse(data).ticket}), 'http://diannanye.com/cooling/'))
+    res.json(sign(getJsApiTicket().then(data => {return JSON.parse(data).ticket}), 'http://diannanye.com/cooling/'))
 })
  app.get('/*', function(req, res, next) {
     // 使用默认参数，除了根路径要改变

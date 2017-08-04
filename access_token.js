@@ -11,7 +11,7 @@ const getAccessToken = function () {
 
   let wxGetAccessTokenBaseUrl = 'https://api.weixin.qq.com/cgi-bin/token?'+qs.stringify(queryParams);
   let options = {
-    method: 'GET',
+    method: 'get',
     url: wxGetAccessTokenBaseUrl
   };
   return new Promise((resolve, reject) => {
@@ -41,4 +41,3 @@ const refreshToken = function () {
   }, 7000*1000);
 };
 
-module.exports = getAccessToken;
