@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ericajiajia/verify#readme",
   "dependencies": {
+    "crypto": "0.0.3",
     "express": "^4.15.3",
     "redis": "^2.7.1",
     "request": "^2.81.0"
