@@ -6,17 +6,10 @@ var http = require('http')
 // 构建Express实例
 var app = express()
 
-app.listen(3001, '0.0.0.0', function () {console.log(1)})
+app.listen(3000, '0.0.0.0', function () {console.log(1)})
 refreshToken()
 // 注册页面可以看到显式数据
-app.get('/data', function (req, res) {
-    getJsapi()
-    .then(function (result) {
-        var obj = sign(result.jsapi, 'http://diannanye.com/cooling/')
-        console.log('sign:'+obj)
-        res.json(obj)
-    })
-})
+app.get('/data', getJsapi)
  app.get('/*', function(req, res, next) {
     // 使用默认参数，除了根路径要改变
     var options = {
@@ -34,10 +27,10 @@ app.get('/data', function (req, res) {
         if (err) {
             console.log(err);
             res.status(err.status).end()
-        }
+        }   
         else {
             console.log('sent', fileName)
-        }
-    })
-})
+        }   
+    })  
+})  
 
