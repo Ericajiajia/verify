@@ -3,7 +3,7 @@ const qs = require('querystring')
 const request = require('request')
 const redis = require('redis')
 var client = redis.createClient()
-// access_token的获取
+// access_token的获取，获取之后通过access_token去请求参数jsapi_ticket，都要全局缓存，有效期都是7200s
 const getAccessToken = function () {
   let queryParams = {
     'grant_type': 'client_credential',
